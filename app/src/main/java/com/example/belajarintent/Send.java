@@ -13,7 +13,7 @@ public class Send extends AppCompatActivity {
 
     public TextView contactname;
 
-    private static final String LOG_TAG = MainActivity.class.getSimpleName();
+    private static final String LOG_TAG = Send.class.getSimpleName();
 
     public static final String EXTRA_MESSAGE =
             "com.example.belajarintent.extra.MESSAGE";
@@ -45,7 +45,7 @@ public class Send extends AppCompatActivity {
     public void launchSecondActivity(View view) {
         Log.d(LOG_TAG, "Button clicked!");
 
-        Intent intent = new Intent(this, SecondActivity.class);
+        Intent intent = new Intent(this, Received.class);
         String message = mMessageEditText.getText().toString();
 
         intent.putExtra(EXTRA_MESSAGE, message);
